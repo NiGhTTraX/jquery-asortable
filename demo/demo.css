@@ -1,0 +1,19 @@
+#as1 {
+	position: relative;
+}
+#as1 div {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	padding: 10px;
+	border: 1px solid #000;
+	text-align: center;
+}
+.ui-sortable-placeholder {
+	visibility: visible !important;
+	opacity: 0.5 !important;
+}
+.no {
+	background-color: #ccc;
+}
+
