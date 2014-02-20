@@ -16,7 +16,7 @@
   "author": "Andrei Picus",
   "license": "GPL",
   "bugs": {
-    "url": "https://github.com/NiGhTTraX/jquery-asrotable/issues"
+    "url": "https://github.com/NiGhTTraX/jquery-asortable/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
