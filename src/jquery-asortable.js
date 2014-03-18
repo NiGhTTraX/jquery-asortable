@@ -18,7 +18,8 @@
 
 $.widget("nighttrax.asortable", $.ui.sortable, {
 	options: {
-		attributes: ["position", "left", "top", "transform"]
+		attributes: ["position", "left", "top", "transform"],
+		existingSortable: false
 	},
 
 	_create: function() {
@@ -29,8 +30,10 @@ $.widget("nighttrax.asortable", $.ui.sortable, {
 		// Store positions.
 		this._refreshPositions();
 
-		// Initialize sortable plugin passing in all options.
-		this.element.sortable(this.options);
+		if (!this.options.existingSortable) {
+			// Initialize new sortable plugin passing in all options.
+			this.element.sortable(this.options);
+		}
 
 		// Bind special listeners.
 		this.element.on("sortstart", function(e, ui) {
@@ -57,7 +60,9 @@ $.widget("nighttrax.asortable", $.ui.sortable, {
 
 	_destroy: function() {
 		this.element.removeClass("asortable");
-		this.element.sortable("destroy");
+		if (!this.options.existingSortable) {
+			this.element.sortable("destroy");
+		}
 	},
 
 	_refreshPositions: function() {
