@@ -1,6 +1,8 @@
 jquery-asortable
 ================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NiGhTTraX/jquery-asortable.svg)](https://greenkeeper.io/)
+
 asortable is a [jQuery UI](http://www.jqueryui.com) plugin that extends the
 normal sortable plugin and allows you to use it on absolutely positioned items.
 
